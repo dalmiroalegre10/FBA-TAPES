@@ -6,7 +6,7 @@ const productos = [
  precio: 5300,
  pack:"Pack x6 $29.400",
  cantidad:0,
- imagen:"img/D3_Sport_Tape_blanco.jpg.jpeg"
+ imagen:"D3_Sport_Tape_blanco.jpg.jpeg"
  },
 
  {
@@ -15,7 +15,7 @@ const productos = [
  precio: 6300,
  pack:"Pack x6 $35.000",
  cantidad:0,
- imagen:"img/D3_Sport_Tape_blanco.jpg.jpeg"
+ imagen:"D3_Sport_Tape_blanco.jpg.jpeg"
  },
 
  {
@@ -24,7 +24,7 @@ const productos = [
  precio: 2700,
  pack:"-",
  cantidad:0,
- imagen:"img/Tacsa_PVC_Tape_Termosellado_negro.jpg.jpeg"
+ imagen:"Tacsa_PVC_Tape_Termosellado_negro.jpg.jpeg"
  },
  {
  id:4,
@@ -32,7 +32,7 @@ const productos = [
  precio: 6800,
  pack:"Pack x6 $40.000",
  cantidad:0,
- imagen:"img/Hipoalergenic_Cinta_Adhesiva_Deportiva_negro.jpg.jpeg"
+ imagen:"Hipoalergenic_Cinta_Adhesiva_Deportiva_negro.jpg.jpeg"
  },
  {
  id:5,
@@ -40,7 +40,7 @@ const productos = [
  precio: 11000,
  pack:"Pack x4 $40.000",
  cantidad:0,
- imagen:"img/D3_Light_Rip_Tape_Blanco.jpg.jpeg"
+ imagen:"D3_Light_Rip_Tape_Blanco.jpg.jpeg"
  },
  {
  id:6,
@@ -48,7 +48,7 @@ const productos = [
  precio: 11000,
  pack:"Pack x4 $40.000",
  cantidad:0,
- imagen:"img/D3_Light_Rip_Tape_Negro.jpg.jpeg"
+ imagen:"D3_Light_Rip_Tape_Negro.jpg.jpeg"
  },
  {
  id:7,
@@ -56,7 +56,7 @@ const productos = [
  precio: 5000,
  pack:"Pack x6 $27.000",
  cantidad:0,
- imagen:"img/D3_Tape_Cohesive_Polybag_blanco.jpg.jpeg"
+ imagen:"D3_Tape_Cohesive_Polybag_blanco.jpg.jpeg"
  },
  {
  id:8,
@@ -64,7 +64,7 @@ const productos = [
  precio: 5000,
  pack:"Pack x6 $27.000",
  cantidad:0,
- imagen:"img/D3_Tape_Cohesive_Polybag_negro.jpg.jpeg"
+ imagen:"D3_Tape_Cohesive_Polybag_negro.jpg.jpeg"
  },
  {
  id:9,
@@ -72,7 +72,7 @@ const productos = [
  precio: 10500,
  pack:"Pack x4 $38.000",
  cantidad:0,
- imagen:"img/D3_Hypofix_blanco.jpg.jpeg"
+ imagen:"D3_Hypofix_blanco.jpg.jpeg"
  },
  {
  id:10,
@@ -80,7 +80,7 @@ const productos = [
  precio: 8800,
  pack:"Pack x4 $32.000",
  cantidad:0,
- imagen:"img/D3_RST_Rigid_Tape_beige.jpg.jpeg"
+ imagen:"D3_RST_Rigid_Tape_beige.jpg.jpeg"
  },
  {
  id:11,
@@ -88,7 +88,7 @@ const productos = [
  precio: 15000,
  pack:"-",
  cantidad:0,
- imagen:"img/D3_Protector_Bucal_Premium_Doble_Gel.jpg.jpeg"
+ imagen:"D3_Protector_Bucal_Premium_Doble_Gel.jpg.jpeg"
  }
  ];
 
