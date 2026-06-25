@@ -112,18 +112,17 @@ function renderizar() {
   });
   actualizarResumen();
 }
-
 function actualizarResumen() {
-const listaPedido = document.getElementById(“listaPedido”);
- const totalPedido = document.getElementById(“totalPedido”);
+const listaPedido = document.getElementById("listaPedido");
+const totalPedido = document.getElementById("totalPedido");
 if(!listaPedido || !totalPedido) return;
 let total = 0;
-listaPedido.innerHTML = “”;
+listaPedido.innerHTML = "";
 const seleccionados = productos.filter(p => p.cantidad > 0);
 if(seleccionados.length === 0){
-listaPedido.innerHTML = “No hay productos seleccionados.”;
-totalPedido.textContent = “0”;
-return;
+    listaPedido.innerHTML = "No hay productos seleccionados.";
+    totalPedido.textContent = "0";
+    return;
 }
 seleccionados.forEach(producto => {
     const item = document.createElement("p");
@@ -133,6 +132,7 @@ seleccionados.forEach(producto => {
 });
 totalPedido.textContent = total.toLocaleString();
 }
+
  
 function sumar(id) {
 const producto = productos.find(p => p.id === id);
