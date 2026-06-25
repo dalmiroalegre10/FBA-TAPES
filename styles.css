@@ -324,3 +324,16 @@ flex-direction:column;
 .logo-fba:hover{
     transform: scale(1.08);
 }
+
+.logo-seccion{
+    background: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.logo-fba{
+    width: 120px;
+    height: auto;
+}
+
