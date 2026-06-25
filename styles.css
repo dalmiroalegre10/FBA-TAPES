@@ -306,19 +306,19 @@ flex-direction:column;
     color: #ffb300;
 }
 
-.logo-seccion{
+.logo-section{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
-    background: white;
+    background: transparent;
 }
 
 .logo-fba{
-    width: 95px;
+    width: 180px;
     height: auto;
     display: block;
-  margin:0 auto;
 }
 
 .logo-fba:hover{
