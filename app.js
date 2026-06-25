@@ -40,7 +40,7 @@ const productos = [
  precio: 11000,
  pack:"Pack x4 $40.000",
  cantidad:0,
- imagen:"D3_Light_Rip_Tape_Blanco.jpg.jpeg"
+ imagen:"D3_Light_Rip_Tape_blanco.jpg.jpeg"
  },
  {
  id:6,
@@ -48,7 +48,7 @@ const productos = [
  precio: 11000,
  pack:"Pack x4 $40.000",
  cantidad:0,
- imagen:"D3_Light_Rip_Tape_Negro.jpg.jpeg"
+ imagen:"D3_Light_Rip_Tape_negro.jpg.jpeg"
  },
  {
  id:7,
@@ -72,7 +72,7 @@ const productos = [
  precio: 10500,
  pack:"Pack x4 $38.000",
  cantidad:0,
- imagen:"D3_Hypofix_blanco.jpg.jpeg"
+ imagen:"D3_HypoFix_blanco.jpg.jpeg"
  },
  {
  id:10,
