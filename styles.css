@@ -306,12 +306,6 @@ flex-direction:column;
     color: #ffb300;
 }
 
-  .logo-seccion{
-    text-align:center;
-    padding:25px 0 5px;
-    background:#0d0d0d;
-}
-
 .logo-seccion{
     display: flex;
     justify-content: center;
@@ -321,9 +315,10 @@ flex-direction:column;
 }
 
 .logo-fba{
-    width: 150px;
+    width: 95px;
     height: auto;
     display: block;
+  margin:0 auto;
 }
 
 .logo-fba:hover{
