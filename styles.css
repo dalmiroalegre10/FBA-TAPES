@@ -306,6 +306,11 @@ flex-direction:column;
     color: #ffb300;
 }
 
+.logo-fba{
+    width:180px;
+    margin-bottom:20px;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,.5));
+}
 
 
 }
