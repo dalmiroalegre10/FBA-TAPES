@@ -94,6 +94,7 @@ const productos = [
 
 const catalogo = document.getElementById("catalogo");
 function renderizar() {
+ console.log("renderizando catalogo");
   catalogo.innerHTML = "";
   productos.forEach((producto) => {
     catalogo.innerHTML += `
@@ -117,7 +118,7 @@ const listaPedido = document.getElementById("listaPedido");
 const totalPedido = document.getElementById("totalPedido");
 if(!listaPedido || !totalPedido) return;
 let total = 0;
-listaPedido.innerHTML = "";
+listaPedido.innerHTML = "No hay productos seleccionados.";
 const seleccionados = productos.filter(p => p.cantidad > 0);
 if(seleccionados.length === 0){
     listaPedido.innerHTML = "No hay productos seleccionados.";
@@ -159,7 +160,7 @@ const nombre = document.getElementById("nombre").value;
 const pedido = productos
  .filter(p => p.cantidad > 0)
  .map(p => `${p.nombre} x${p.cantidad}`)
- .join("", "\n");
+ .join("\n");
 if (!nombre || !whatsapp || pedido === "") {
 alert("Completá tus datos y seleccioná productos.");
  return;
