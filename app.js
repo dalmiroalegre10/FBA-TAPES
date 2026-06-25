@@ -128,17 +128,14 @@ totalPedido.textContent = “0”;
 return;
 }
 seleccionados.forEach(producto => {
-const item = document.createElement(“p”);
-item.textContent =
- ‘${producto.nombre} x${producto.cantidad} = $${(producto.precio * producto.cantidad).toLocaleString()‘;
-listaPedido.appendChild(item);
-total += producto.precio * producto.cantidad;
+    const item = document.createElement("p");
+    item.textContent = `${producto.nombre} x${producto.cantidad} = $${(producto.precio * producto.cantidad).toLocaleString()}`;
+    listaPedido.appendChild(item);
+    total += producto.precio * producto.cantidad;
 });
 totalPedido.textContent = total.toLocaleString();
 }
 
-});
- 
  actualizarResumen();
  
 }
