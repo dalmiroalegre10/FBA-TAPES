@@ -312,28 +312,21 @@ flex-direction:column;
     background:#0d0d0d;
 }
 
-
-.logo-fba{
-    width:95px; /* tamaño chico */
-    height:auto;
-    filter: drop-shadow(0 0 12px rgba(0,0,0,.45));
-    transition: transform 0.3s ease;
+.logo-seccion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: white;
 }
 
+.logo-fba{
+    width: 150px;
+    height: auto;
+    display: block;
+}
 
 .logo-fba:hover{
     transform: scale(1.08);
-}
-
-.logo-seccion{
-    background: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-
-.logo-fba{
-    width: 120px;
-    height: auto;
 }
 
