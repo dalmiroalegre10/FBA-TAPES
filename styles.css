@@ -161,74 +161,162 @@ font-size:28px;
 
 
 .hero{
-background:linear-gradient(
-rgba(0,0,0,.6),
-rgba(0,0,0,.6)
-),
-url("pumas.jpeg");
-background-size:cover;
-background-position:center;
+height:550px;
+background:url("pumas.jpeg") center center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 color:white;
-padding:80px 20px;
 }
 
 
-.hero h2{
+.overlay{
+background:rgba(0,0,0,.55);
+padding:40px;
+border-radius:20px;
+max-width:700px;
+}
+
+
+.overlay h2{
 font-size:48px;
 margin-bottom:15px;
-text-transform:uppercase;
 }
 
 
-.hero p{
-font-size:20px;
-max-width:800px;
-margin:auto;
+.inspiracion{
+padding:80px 0;
+background:white;
 }
 
 
-.galeria-rugby{
-margin-top:40px;
+.inspiracion-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
 
-.galeria-rugby img{
+.inspiracion-grid img{
 width:100%;
-height:250px;
+border-radius:20px;
+}
+
+
+.texto-inspiracion h2{
+font-size:38px;
+margin-bottom:20px;
+}
+
+
+.texto-inspiracion p{
+font-size:18px;
+margin-bottom:15px;
+}
+
+
+.banner-rugby img{
+width:100%;
+height:450px;
 object-fit:cover;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.4);
+display:block;
+}
+
+
+.motivacion{
+padding:80px 20px;
+background:white;
+text-align:center;
+}
+
+
+.motivacion img{
+width:100%;
+max-width:800px;
+border-radius:20px;
+margin-bottom:30px;
+}
+
+
+.motivacion h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+
+.motivacion p{
+font-size:20px;
+}
+
+
+.cierre-rugby{
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+background:#111;
+color:white;
+}
+
+
+.cierre-rugby img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+.texto-cierre{
+padding:60px;
+}
+
+
+.texto-cierre h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+
+.texto-cierre p{
+font-size:20px;
+line-height:1.6;
+}
+
+
+.producto{
 transition:.3s;
 }
 
 
-.galeria-rugby img:hover{
-transform:scale(1.03);
+.producto:hover{
+transform:translateY(-8px);
 }
 
 
-header{
-background:#4b1f1f;
-border-bottom:6px solid #f0c040;
+@media(max-width:768px){
+
+
+.inspiracion-grid{
+grid-template-columns:1fr;
 }
 
 
-#enviarPedido{
-background:#4b1f1f;
+.cierre-rugby{
+grid-template-columns:1fr;
 }
 
 
-.controles button{
-background:#4b1f1f;
+.overlay h2{
+font-size:32px;
 }
 
 
-body{
-font-family:'Trebuchet MS',sans-serif;
-background:#f3f3f3;
+.texto-cierre{
+padding:30px;
+}
+
+
 }
 
 }
