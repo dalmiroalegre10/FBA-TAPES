@@ -182,7 +182,6 @@ await fetch(URL_SCRIPT, {
 });
 
 alert("Pedido enviado correctamente.");
-alert("Pedido enviado correctamente.");
 document.getElementById("nombre").value = "";
 document.getElementById("whatsapp").value = "";
 document.getElementById("instagram").value = "";
