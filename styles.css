@@ -277,5 +277,35 @@ text-align:center;
 flex-direction:column;
 }
 
+  .pedido {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+
+.pedido h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+
+#listaPedido {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 120px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+.total-pedido {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffb300;
+}
+
+
 
 }
