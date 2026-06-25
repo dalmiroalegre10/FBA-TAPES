@@ -306,8 +306,21 @@ flex-direction:column;
     color: #ffb300;
 }
 
+  .logo-seccion{
+    text-align:center;
+    padding:25px 0 5px;
+    background:#0d0d0d;
+}
+
+
 .logo-fba{
-    width:180px;
-    margin-bottom:20px;
-    filter: drop-shadow(0 0 20px rgba(0,0,0,.5));
+    width:95px; /* tamaño chico */
+    height:auto;
+    filter: drop-shadow(0 0 12px rgba(0,0,0,.45));
+    transition: transform 0.3s ease;
+}
+
+
+.logo-fba:hover{
+    transform: scale(1.08);
 }
