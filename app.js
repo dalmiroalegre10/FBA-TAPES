@@ -94,27 +94,25 @@ const productos = [
 
 const catalogo = document.getElementById("catalogo");
 function renderizar() {
-catalogo.innerHTML = "";
-productos.forEach((producto) => {
-catalogo.innerHTML += `
-<div class="producto">
+  catalogo.innerHTML = "";
+  productos.forEach((producto) => {
+    catalogo.innerHTML += `
+      <div class="producto">
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h4>${producto.nombre}</h4>
+        <p>Precio: $${producto.precio.toLocaleString()}</p>
+        <p>${producto.pack}</p>
+        <div class="controles">
+          <button onclick="restar(${producto.id})">-</button>
+          <span>${producto.cantidad}</span>
+          <button onclick="sumar(${producto.id})">+</button>
+        </div>
+      </div>
+        `;
+  });
+  actualizarResumen();
+}
 
-<img src="${producto.imagen}" alt="${producto.nombre}">
-
-<h4>${producto.nombre}</h4>
-
-<p>Precio: $${producto.precio.toLocaleString()}</p>
-
-<p>${producto.pack}</p>
-
-<div class="controles">
-<button onclick="restar(${producto.id})">-</button>
-<span>${producto.cantidad}</span>
-<button onclick="sumar(${producto.id})">+</button>
-</div>
-
-</div>
-`;
 function actualizarResumen() {
 const listaPedido = document.getElementById(“listaPedido”);
  const totalPedido = document.getElementById(“totalPedido”);
@@ -135,10 +133,7 @@ seleccionados.forEach(producto => {
 });
 totalPedido.textContent = total.toLocaleString();
 }
-
- actualizarResumen();
  
-}
 function sumar(id) {
 const producto = productos.find(p => p.id === id);
 if (producto) {
