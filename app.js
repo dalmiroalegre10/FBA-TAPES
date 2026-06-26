@@ -1,4 +1,4 @@
-const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbywyuyZ4KbK6_2CWdxZHukIENnLdWr1NYR5ohdCBOp6iSmf2vlirfrBca-cGx503A2T/exec";
+const URL_SCRIPT = https://script.google.com/macros/s/AKfycbw4vFydYfwIk3bHQQt6mWqhfWacfQFoa2nye4VpfwDeHfphWYmi6dXkI8ARWLwu34xS/exec;
 const ESCALAS = [
     {monto:150000, descuento:10},
     {monto:200000, descuento:15},
