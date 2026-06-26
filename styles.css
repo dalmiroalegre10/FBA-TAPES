@@ -321,3 +321,41 @@ flex-direction:column;
     margin-bottom: 20px;
     color: #ffb300;
 }
+
+    .progreso-division{
+    margin-top:30px;
+    background:#1c1c1c;
+    padding:25px;
+    border-radius:15px;
+}
+
+
+.progreso-division h3{
+    margin-bottom:15px;
+    color:#ffb300;
+}
+
+
+.barra{
+    width:100%;
+    height:22px;
+    background:#333;
+    border-radius:30px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+
+#barraProgreso{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#ff9800,#ffc107);
+    transition:.5s;
+}
+
+
+#mensajeDescuento{
+    font-size:18px;
+    font-weight:bold;
+}
+
