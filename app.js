@@ -5,7 +5,7 @@ const productos = [
  nombre:"D3 Sport Tape 3.8 cm",
  precio: 5300,
  pack:"Pack x6 $29.400",
- packCantidad; 6,
+ packCantidad: 6,
 packPrecio:29400,
  cantidad:0,
  imagen:"D3_Sport_Tape_blanco.jpg.jpeg"
