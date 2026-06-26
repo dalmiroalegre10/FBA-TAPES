@@ -308,13 +308,14 @@ flex-direction:column;
 
 .logo-section{
     text-align: center;
-    margin: 30px 0 40px;
+    margin: 40px 0 50px;
 }
 
 
 .logo-fba{
-    width: 320px;
+    width: 2400px;
     height: auto;
+  display: inline-block;
 }
 
 
