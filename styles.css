@@ -313,14 +313,14 @@ flex-direction:column;
 }
 
 .logo-fba{
-    width: 80px;
-    height: auto;
-  display: block;
-  margin: 0 auto;
+    width: 80px !important; 
+    height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 
 
 .logo-fba:hover{
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
