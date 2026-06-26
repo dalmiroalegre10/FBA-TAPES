@@ -251,12 +251,25 @@ if (!nombre || !whatsapp || pedido === "") {
 alert("Completá tus datos y seleccioná productos.");
  return;
 }
+const division = document.getElementById("division").value;
+const total = productos.reduce((suma, p) => {
+  if (p.cantidad === 0) return suma;
+  if (p.packCantidad) {
+    const packs = Math.floor(p.cantidad / p.packCantidad);
+    const sueltos = p.cantidad % p.packCantidad;
+    return suma + packs * p.packPrecio + sueltos * p.precio;
+  }
+  return suma + p.cantidad * p.precio;
+}, 0);
 const datos = {
- nombre,
- whatsapp,
- instagram,
- pedido
- };
+  nombre,
+  whatsapp,
+  instagram,
+  division,
+  pedido,
+  total
+};
+
 try {
 await fetch(URL_SCRIPT, {
   method: "POST",
