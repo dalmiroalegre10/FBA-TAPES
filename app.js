@@ -174,6 +174,7 @@ function actualizarResumen() {
         total += subtotal;
     });
     totalPedido.textContent = total.toLocaleString();
+    actualizarProgresoDivision();
 }
 
 async function actualizarProgresoDivision(){
@@ -222,6 +223,9 @@ if (producto && producto.cantidad > 0) {
 }
 
 renderizar();
+function actualizarProgresoDivision(){
+    document.getElementById("division").addEventListener("change", actualizarProgresoDivision);
+}
 const botonEnviar = document.getElementById("enviarPedido");
 if (botonEnviar) {
 botonEnviar.addEventListener("click", async () => {
