@@ -307,21 +307,16 @@ flex-direction:column;
 }
 
 .logo-section{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
-    background: #111;
+    text-align: center;
+    margin: 30px 0 40px;
 }
 
 
 .logo-fba{
     width: 320px;
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
+
 
 
 .logo-fba:hover{
