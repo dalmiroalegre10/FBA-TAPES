@@ -244,6 +244,22 @@ margin-bottom:15px;
 color:#f0c674;
 }
 
+.logo-seccion {
+    text-align: center;
+    margin-top: 50px; /* separación respecto a "FBA TAPES acompaña" */
+}
+
+.logo-fba {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.logo-fba:hover {
+    transform: scale(1.05);
+}
 
 footer{
 background:black;
@@ -304,23 +320,4 @@ flex-direction:column;
     font-weight: 700;
     margin-bottom: 20px;
     color: #ffb300;
-}
-
-.logo-section{
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 70px;
-}
-
-.logo-fba{
-    width: 80px !important; 
-    height: auto !important;
-  display: block !important;
-  margin: 0 auto !important;
-}
-
-
-
-.logo-fba:hover{
-    transform: scale(1.05);
 }
