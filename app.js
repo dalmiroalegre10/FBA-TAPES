@@ -1,4 +1,10 @@
 const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbywyuyZ4KbK6_2CWdxZHukIENnLdWr1NYR5ohdCBOp6iSmf2vlirfrBca-cGx503A2T/exec";
+const ESCALAS = [
+    {monto:150000, descuento:10},
+    {monto:200000, descuento:15},
+    {monto:350000, descuento:20}
+];
+
 const productos = [
  {
  id:1,
@@ -168,6 +174,35 @@ function actualizarResumen() {
         total += subtotal;
     });
     totalPedido.textContent = total.toLocaleString();
+}
+
+async function actualizarProgresoDivision(){
+    const division = document.getElementById("division").value;
+    if(division=="") return;
+    const respuesta = await fetch(URL_SCRIPT+"?division="+division);
+    const datos = await respuesta.json();
+    const total = datos.total || 0;
+    document.getElementById("totalDivision").textContent =
+        total.toLocaleString();
+    let siguiente = ESCALAS.find(e=>total<e.monto);
+    if(!siguiente){
+        document.getElementById("barraProgreso").style.width="100%";
+
+        document.getElementById("mensajeDescuento").innerHTML=
+        "🎉 ¡La división ya alcanzó el 20% de descuento!";
+        return;
+    }
+    let anterior=0;
+    if(siguiente.descuento==15)
+        anterior=150000;
+    if(siguiente.descuento==20)
+        anterior=200000;
+    const porcentaje=((total-anterior)/(siguiente.monto-anterior))*100;
+    document.getElementById("barraProgreso").style.width=
+        Math.max(0,Math.min(100,porcentaje))+"%";
+    const falta=siguiente.monto-total;
+    document.getElementById("mensajeDescuento").innerHTML=
+        `Faltan <b>$${falta.toLocaleString()}</b> para llegar al <b>${siguiente.descuento}%</b> de descuento.`;
 }
 
  
