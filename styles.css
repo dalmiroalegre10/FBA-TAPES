@@ -246,11 +246,11 @@ color:#f0c674;
 
 .logo-seccion {
     text-align: center;
-    margin-top: 50px; /* separación respecto a "FBA TAPES acompaña" */
+    margin-top: 60px; /* separación respecto a "FBA TAPES acompaña" */
 }
 
 .logo-fba {
-    width: 100px;
+    width: 70px;
     height: auto;
     display: block;
     margin: 0 auto;
