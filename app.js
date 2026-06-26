@@ -5,6 +5,8 @@ const productos = [
  nombre:"D3 Sport Tape 3.8 cm",
  precio: 5300,
  pack:"Pack x6 $29.400",
+ packCantidad; 6;
+packPrecio:29400;
  cantidad:0,
  imagen:"D3_Sport_Tape_blanco.jpg.jpeg"
  },
@@ -14,6 +16,8 @@ const productos = [
  nombre:"D3 Sport Tape 5 cm",
  precio: 6300,
  pack:"Pack x6 $35.000",
+ packCantidad: 6;
+ packPrecio:35000;
  cantidad:0,
  imagen:"D3_Sport_Tape_blanco.jpg.jpeg"
  },
@@ -31,6 +35,8 @@ const productos = [
  nombre:"Hipoalergic Negra",
  precio: 6800,
  pack:"Pack x6 $40.000",
+  packCantidad:6;
+  packPrecio:40000;
  cantidad:0,
  imagen:"Hipoalergenic_Cinta_Adhesiva_Deportiva_negro.jpg.jpeg"
  },
@@ -39,6 +45,8 @@ const productos = [
  nombre:"Light Rip Tape Blanco",
  precio: 11000,
  pack:"Pack x4 $40.000",
+ packCantidad:4;
+ packPrecio:40000;
  cantidad:0,
  imagen:"D3_Light_Rip_Tape_blanco.jpg.jpeg"
  },
@@ -47,6 +55,8 @@ const productos = [
  nombre:"Light Rip Tape Negro",
  precio: 11000,
  pack:"Pack x4 $40.000",
+  packCantidad:4;
+  packPrecio:40000;
  cantidad:0,
  imagen:"D3_Light_Rip_Tape_negro.jpg.jpeg"
  },
@@ -55,6 +65,8 @@ const productos = [
  nombre:"Cohesiva Blanca",
  precio: 5000,
  pack:"Pack x6 $27.000",
+  packCantidad:6;
+  packPrecio:27000;
  cantidad:0,
  imagen:"D3_Tape_Cohesive_Polybag_blanco.jpg.jpeg"
  },
@@ -63,6 +75,8 @@ const productos = [
  nombre:"Cohesiva Negra",
  precio: 5000,
  pack:"Pack x6 $27.000",
+  packCantidad:6;
+  packPrecio:27000;
  cantidad:0,
  imagen:"D3_Tape_Cohesive_Polybag_negro.jpg.jpeg"
  },
@@ -71,6 +85,8 @@ const productos = [
  nombre:"Hypofix",
  precio: 10500,
  pack:"Pack x4 $38.000",
+  packCantidad:4;
+  packPrecio:38000;
  cantidad:0,
  imagen:"D3_HypoFix_blanco.jpg.jpeg"
  },
@@ -79,6 +95,8 @@ const productos = [
  nombre:"RST Beige",
  precio: 8800,
  pack:"Pack x4 $32.000",
+  packCantidad:4;
+  packPrecio:32000;
  cantidad:0,
  imagen:"D3_RST_Rigid_Tape_beige.jpg.jpeg"
  },
@@ -116,20 +134,44 @@ function renderizar() {
 function actualizarResumen() {
 const listaPedido = document.getElementById("listaPedido");
 const totalPedido = document.getElementById("totalPedido");
-if(!listaPedido || !totalPedido) return;
+if (!listaPedido || !totalPedido) return;
+listaPedido.innerHTML = "";
 let total = 0;
-listaPedido.innerHTML = "No hay productos seleccionados.";
 const seleccionados = productos.filter(p => p.cantidad > 0);
-if(seleccionados.length === 0){
+if (seleccionados.length === 0) {
     listaPedido.innerHTML = "No hay productos seleccionados.";
     totalPedido.textContent = "0";
     return;
 }
 seleccionados.forEach(producto => {
+    let subtotal = 0;
+    let texto = "";
+    if (producto.packCantidad > 0) {
+        const packs = Math.floor(producto.cantidad / producto.packCantidad);
+        const sueltos = producto.cantidad % producto.packCantidad;
+        subtotal = packs * producto.packPrecio + sueltos * producto.precio;
+        if (packs > 0 && sueltos > 0) {
+            texto =
+`${producto.nombre}
+${packs} Pack x${producto.packCantidad} + ${sueltos} unidades = $${subtotal.toLocaleString()}`;
+        } else if (packs > 0) {
+            texto =
+`${producto.nombre}
+${packs} Pack x${producto.packCantidad} = $${subtotal.toLocaleString()}`;
+        } else {
+            subtotal = producto.cantidad * producto.precio;
+            texto =
+`${producto.nombre} x${producto.cantidad} = $${subtotal.toLocaleString()}`;
+        }
+    } else {
+        subtotal = producto.cantidad * producto.precio;
+        texto =
+`${producto.nombre} x${producto.cantidad} = $${subtotal.toLocaleString()}`;
+    }
     const item = document.createElement("p");
-    item.textContent = `${producto.nombre} x${producto.cantidad} = $${(producto.precio * producto.cantidad).toLocaleString()}`;
+    item.textContent = texto;
     listaPedido.appendChild(item);
-    total += producto.precio * producto.cantidad;
+    total += subtotal;
 });
 totalPedido.textContent = total.toLocaleString();
 }
