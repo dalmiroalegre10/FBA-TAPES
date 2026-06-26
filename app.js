@@ -5,8 +5,8 @@ const productos = [
  nombre:"D3 Sport Tape 3.8 cm",
  precio: 5300,
  pack:"Pack x6 $29.400",
- packCantidad; 6;
-packPrecio:29400;
+ packCantidad; 6,
+packPrecio:29400,
  cantidad:0,
  imagen:"D3_Sport_Tape_blanco.jpg.jpeg"
  },
@@ -16,8 +16,8 @@ packPrecio:29400;
  nombre:"D3 Sport Tape 5 cm",
  precio: 6300,
  pack:"Pack x6 $35.000",
- packCantidad: 6;
- packPrecio:35000;
+ packCantidad: 6,
+ packPrecio:35000,
  cantidad:0,
  imagen:"D3_Sport_Tape_blanco.jpg.jpeg"
  },
@@ -35,8 +35,8 @@ packPrecio:29400;
  nombre:"Hipoalergic Negra",
  precio: 6800,
  pack:"Pack x6 $40.000",
-  packCantidad:6;
-  packPrecio:40000;
+  packCantidad:6,
+  packPrecio:40000,
  cantidad:0,
  imagen:"Hipoalergenic_Cinta_Adhesiva_Deportiva_negro.jpg.jpeg"
  },
@@ -45,8 +45,8 @@ packPrecio:29400;
  nombre:"Light Rip Tape Blanco",
  precio: 11000,
  pack:"Pack x4 $40.000",
- packCantidad:4;
- packPrecio:40000;
+ packCantidad:4,
+ packPrecio:40000,
  cantidad:0,
  imagen:"D3_Light_Rip_Tape_blanco.jpg.jpeg"
  },
@@ -55,8 +55,8 @@ packPrecio:29400;
  nombre:"Light Rip Tape Negro",
  precio: 11000,
  pack:"Pack x4 $40.000",
-  packCantidad:4;
-  packPrecio:40000;
+  packCantidad:4,
+  packPrecio:40000,
  cantidad:0,
  imagen:"D3_Light_Rip_Tape_negro.jpg.jpeg"
  },
@@ -65,8 +65,8 @@ packPrecio:29400;
  nombre:"Cohesiva Blanca",
  precio: 5000,
  pack:"Pack x6 $27.000",
-  packCantidad:6;
-  packPrecio:27000;
+  packCantidad:6,
+  packPrecio:27000,
  cantidad:0,
  imagen:"D3_Tape_Cohesive_Polybag_blanco.jpg.jpeg"
  },
@@ -75,8 +75,8 @@ packPrecio:29400;
  nombre:"Cohesiva Negra",
  precio: 5000,
  pack:"Pack x6 $27.000",
-  packCantidad:6;
-  packPrecio:27000;
+  packCantidad:6,
+  packPrecio:27000,
  cantidad:0,
  imagen:"D3_Tape_Cohesive_Polybag_negro.jpg.jpeg"
  },
@@ -85,8 +85,8 @@ packPrecio:29400;
  nombre:"Hypofix",
  precio: 10500,
  pack:"Pack x4 $38.000",
-  packCantidad:4;
-  packPrecio:38000;
+  packCantidad:4,
+  packPrecio:38000,
  cantidad:0,
  imagen:"D3_HypoFix_blanco.jpg.jpeg"
  },
@@ -95,8 +95,8 @@ packPrecio:29400;
  nombre:"RST Beige",
  precio: 8800,
  pack:"Pack x4 $32.000",
-  packCantidad:4;
-  packPrecio:32000;
+  packCantidad:4,
+  packPrecio:32000,
  cantidad:0,
  imagen:"D3_RST_Rigid_Tape_beige.jpg.jpeg"
  },
@@ -201,7 +201,18 @@ const nombre = document.getElementById("nombre").value;
  const instagram = document.getElementById("instagram").value;
 const pedido = productos
  .filter(p => p.cantidad > 0)
- .map(p => `${p.nombre} x${p.cantidad}`)
+    .map(p => {
+        if (p.packCantidad) {
+            const packs = Math.floor(p.cantidad / p.packCantidad);
+            const sueltos = p.cantidad % p.packCantidad;
+            if (packs > 0 && sueltos > 0) {
+                return `${p.nombre}: ${packs} Pack x${p.packCantidad} + ${sueltos} unidades`;
+            } else if (packs > 0) {
+                return `${p.nombre}: ${packs} Pack x${p.packCantidad}`;
+            }
+        }
+        return `${p.nombre} x${p.cantidad}`;
+    })
  .join("\n");
 if (!nombre || !whatsapp || pedido === "") {
 alert("Completá tus datos y seleccioná productos.");
