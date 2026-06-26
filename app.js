@@ -132,48 +132,42 @@ function renderizar() {
   actualizarResumen();
 }
 function actualizarResumen() {
-const listaPedido = document.getElementById("listaPedido");
-const totalPedido = document.getElementById("totalPedido");
-if (!listaPedido || !totalPedido) return;
-listaPedido.innerHTML = "";
-let total = 0;
-const seleccionados = productos.filter(p => p.cantidad > 0);
-if (seleccionados.length === 0) {
-    listaPedido.innerHTML = "No hay productos seleccionados.";
-    totalPedido.textContent = "0";
-    return;
-}
-seleccionados.forEach(producto => {
-    let subtotal = 0;
-    let texto = "";
-    if (producto.packCantidad > 0) {
-        const packs = Math.floor(producto.cantidad / producto.packCantidad);
-        const sueltos = producto.cantidad % producto.packCantidad;
-        subtotal = packs * producto.packPrecio + sueltos * producto.precio;
-        if (packs > 0 && sueltos > 0) {
-            texto =
-`${producto.nombre}
-${packs} Pack x${producto.packCantidad} + ${sueltos} unidades = $${subtotal.toLocaleString()}`;
-        } else if (packs > 0) {
-            texto =
-`${producto.nombre}
-${packs} Pack x${producto.packCantidad} = $${subtotal.toLocaleString()}`;
+    const listaPedido = document.getElementById("listaPedido");
+    const totalPedido = document.getElementById("totalPedido");
+    if (!listaPedido || !totalPedido) return;
+    listaPedido.innerHTML = "";
+    let total = 0;
+    const seleccionados = productos.filter(p => p.cantidad > 0);
+    if (seleccionados.length === 0) {
+        listaPedido.innerHTML = "No hay productos seleccionados.";
+        totalPedido.textContent = "0";
+        return;
+    }
+    seleccionados.forEach(producto => {
+        let subtotal;
+        let texto;
+        if (producto.packCantidad) {
+            const packs = Math.floor(producto.cantidad / producto.packCantidad);
+            const sueltos = producto.cantidad % producto.packCantidad;
+            subtotal = packs * producto.packPrecio + sueltos * producto.precio;
+            if (packs > 0 && sueltos > 0) {
+                texto = `${producto.nombre}: ${packs} Pack x${producto.packCantidad} + ${sueltos} unidades = $${subtotal.toLocaleString()}`;
+            } else if (packs > 0) {
+                texto = `${producto.nombre}: ${packs} Pack x${producto.packCantidad} = $${subtotal.toLocaleString()}`;
+            } else {
+                subtotal = producto.cantidad * producto.precio;
+                texto = `${producto.nombre} x${producto.cantidad} = $${subtotal.toLocaleString()}`;
+            }
         } else {
             subtotal = producto.cantidad * producto.precio;
-            texto =
-`${producto.nombre} x${producto.cantidad} = $${subtotal.toLocaleString()}`;
+            texto = `${producto.nombre} x${producto.cantidad} = $${subtotal.toLocaleString()}`;
         }
-    } else {
-        subtotal = producto.cantidad * producto.precio;
-        texto =
-`${producto.nombre} x${producto.cantidad} = $${subtotal.toLocaleString()}`;
-    }
-    const item = document.createElement("p");
-    item.textContent = texto;
-    listaPedido.appendChild(item);
-    total += subtotal;
-});
-totalPedido.textContent = total.toLocaleString();
+        const item = document.createElement("p");
+        item.textContent = texto;
+        listaPedido.appendChild(item);
+        total += subtotal;
+    });
+    totalPedido.textContent = total.toLocaleString();
 }
 
  
