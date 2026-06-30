@@ -129,7 +129,6 @@ async function actualizarProgresoDivision() {
         if (logroDescuento) logroDescuento.classList.remove("activo");
         return;
     }
-    }
 
     try {
         const respuesta = await fetch(URL_SCRIPT + "?division=" + encodeURIComponent(division));
