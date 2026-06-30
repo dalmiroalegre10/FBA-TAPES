@@ -7,7 +7,7 @@ const ESCALAS = [
 
 const productos = [
     { id: 1, nombre: "D3 Sport Tape (3.8 cm x 10mts)", precio: 5300, pack: "Pack x6 $29.400", packCantidad: 6, packPrecio: 29400, cantidad: 0, imagen: "D3_Sport_Tape_blanco.jpg.jpeg" },
-    { id: 2, nombre: "D3 Sport Tape (5 cm x 10 mts)", precio: 6300, pack: "Pack x6 $35.000", packCantidad: 6, packPrecio: 35000, cantidad: 0, imagen: "D3_Sport_Tape_blanco.jpg.jpeg" },
+    { id: 2, nombre: "D3 Sport Tape (5 cm x 10 mts)", precio: 6500, pack: "Pack x6 $35.000", packCantidad: 6, packPrecio: 35000, cantidad: 0, imagen: "D3_Sport_Tape_blanco.jpg.jpeg" },
     { id: 3, nombre: "Tacsa PVC Tape (1.8 cm x 20 mts)", precio: 2700, pack: "-", cantidad: 0, imagen: "Tacsa_PVC_Tape_Termosellado_negro.jpg.jpeg" },
     { id: 4, nombre: "Hipoalergic Negra (5 cm x 9 mts)", precio: 6800, pack: "Pack x6 $40.000", packCantidad: 6, packPrecio: 40000, cantidad: 0, imagen: "Hipoalergenic_Cinta_Adhesiva_Deportiva_negro.jpg.jpeg" },
     { id: 5, nombre: "Light Rip Tape Blanco (7.5 cm x 7 mts)", precio: 11000, pack: "Pack x4 $40.000", packCantidad: 4, packPrecio: 40000, cantidad: 0, imagen: "D3_Light_Rip_Tape_blanco.jpg.jpeg" },
