@@ -118,14 +118,17 @@ async function actualizarProgresoDivision() {
     const descuentoBox = document.getElementById("descuentoBox");
     const descuentoValor = document.getElementById("descuentoValor");
     const descuentoAhorro = document.getElementById("descuentoAhorro");
+    const logroDescuento = document.getElementById("logroDescuento");
 
-    if (!division) {
+   if (!division) {
         // Sin división seleccionada, resetear
         if (barraProgreso) barraProgreso.style.width = "0%";
         if (totalDivisionEl) totalDivisionEl.textContent = "0";
         if (mensajeDescuento) mensajeDescuento.innerHTML = "Seleccioná tu división para ver el descuento acumulado.";
         if (descuentoBox) descuentoBox.classList.remove("activo");
+        if (logroDescuento) logroDescuento.classList.remove("activo");
         return;
+    }
     }
 
     try {
