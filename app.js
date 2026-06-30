@@ -161,6 +161,24 @@ async function actualizarProgresoDivision() {
         }
 
         // Mostrar descuento aplicable en el resumen del usuario
+        if (logroDescuento) {
+            if (descuentoActual > 0) {
+                let proximoTexto = "";
+                if (siguiente) {
+                    const falta = siguiente.monto - totalDivision;
+                    proximoTexto = ` Faltan $${falta.toLocaleString()} para llegar al ${siguiente.descuento}%.`;
+                } else {
+                    proximoTexto = " ¡Ya está en el máximo descuento posible!";
+                }
+                logroDescuento.innerHTML = `
+                    <div class="logro-titulo">🏆 ¡Logro desbloqueado!</div>
+                    <div class="logro-mensaje"><strong>${division}</strong> alcanzó el <strong>${descuentoActual}%</strong> de descuento.${proximoTexto}</div>
+                `;
+                logroDescuento.classList.add("activo");
+            } else {
+                logroDescuento.classList.remove("activo");
+            }
+        }
         if (descuentoBox && descuentoValor && descuentoAhorro) {
             if (descuentoActual > 0) {
                 const totalUsuario = productos.reduce((s, p) => s + (p.cantidad > 0 ? calcularSubtotal(p) : 0), 0);
