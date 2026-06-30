@@ -58,7 +58,7 @@ body {
 .btn-hero {
   display: inline-block;
   padding: 16px 40px;
-  background: #7d1f2f;
+  background: #ff7a00;
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -177,7 +177,7 @@ select {
   height: 40px;
   border: none;
   border-radius: 50%;
-  background: #7d1f2f;
+  background: #ff7a00;
   color: white;
   font-size: 22px;
   cursor: pointer;
@@ -185,7 +185,7 @@ select {
 }
 
 .controles button:hover {
-  background: #a02840;
+  background: #cc6200;
 }
 
 /* ── SECCIÓN PEDIDO ── */
@@ -281,14 +281,14 @@ select {
   font-family: 'Montserrat', sans-serif;
   border: none;
   border-radius: 50px;
-  background: #f0c674;
+  background: #ff7a00;
   color: #111;
   cursor: pointer;
   transition: background .2s, transform .1s;
 }
 
 #enviarPedido:hover {
-  background: #e6b85c;
+  background: #cc6200;
   transform: translateY(-2px);
 }
 
