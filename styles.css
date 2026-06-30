@@ -510,4 +510,48 @@ footer h3 {
   .escala-pct {
     font-size: 18px;
   }
+  
+.logro-descuento {
+  display: none;
+  margin-top: 18px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2a2416, #3a2f1a);
+  border: 1px solid #f0c674;
+  text-align: center;
+  animation: logroAparece .5s ease, logroPulso 1.8s ease-in-out infinite 1s;
+}
+
+.logro-descuento.activo {
+  display: block;
+}
+
+.logro-descuento .logro-titulo {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #f0c674;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.logro-descuento .logro-mensaje {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+.logro-descuento .logro-mensaje strong {
+  color: #f0c674;
+  font-size: 20px;
+}
+
+@keyframes logroAparece {
+  from { opacity: 0; transform: scale(.92) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes logroPulso {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(240,198,116,.4); }
+  50%      { box-shadow: 0 0 0 10px rgba(240,198,116,0); }
 }
