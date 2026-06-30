@@ -6,16 +6,16 @@ const ESCALAS = [
 ];
 
 const productos = [
-    { id: 1, nombre: "D3 Sport Tape 3.8 cm", precio: 5300, pack: "Pack x6 $29.400", packCantidad: 6, packPrecio: 29400, cantidad: 0, imagen: "D3_Sport_Tape_blanco.jpg.jpeg" },
-    { id: 2, nombre: "D3 Sport Tape 5 cm", precio: 6300, pack: "Pack x6 $35.000", packCantidad: 6, packPrecio: 35000, cantidad: 0, imagen: "D3_Sport_Tape_blanco.jpg.jpeg" },
-    { id: 3, nombre: "Tacsa PVC Tape", precio: 2700, pack: "-", cantidad: 0, imagen: "Tacsa_PVC_Tape_Termosellado_negro.jpg.jpeg" },
-    { id: 4, nombre: "Hipoalergic Negra", precio: 6800, pack: "Pack x6 $40.000", packCantidad: 6, packPrecio: 40000, cantidad: 0, imagen: "Hipoalergenic_Cinta_Adhesiva_Deportiva_negro.jpg.jpeg" },
-    { id: 5, nombre: "Light Rip Tape Blanco", precio: 11000, pack: "Pack x4 $40.000", packCantidad: 4, packPrecio: 40000, cantidad: 0, imagen: "D3_Light_Rip_Tape_blanco.jpg.jpeg" },
-    { id: 6, nombre: "Light Rip Tape Negro", precio: 11000, pack: "Pack x4 $40.000", packCantidad: 4, packPrecio: 40000, cantidad: 0, imagen: "D3_Light_Rip_Tape_negro.jpg.jpeg" },
-    { id: 7, nombre: "Cohesiva Blanca", precio: 5000, pack: "Pack x6 $27.000", packCantidad: 6, packPrecio: 27000, cantidad: 0, imagen: "D3_Tape_Cohesive_Polybag_blanco.jpg.jpeg" },
-    { id: 8, nombre: "Cohesiva Negra", precio: 5000, pack: "Pack x6 $27.000", packCantidad: 6, packPrecio: 27000, cantidad: 0, imagen: "D3_Tape_Cohesive_Polybag_negro.jpg.jpeg" },
-    { id: 9, nombre: "Hypofix", precio: 10500, pack: "Pack x4 $38.000", packCantidad: 4, packPrecio: 38000, cantidad: 0, imagen: "D3_HypoFix_blanco.jpg.jpeg" },
-    { id: 10, nombre: "RST Beige", precio: 8800, pack: "Pack x4 $32.000", packCantidad: 4, packPrecio: 32000, cantidad: 0, imagen: "D3_RST_Rigid_Tape_beige.jpg.jpeg" },
+    { id: 1, nombre: "D3 Sport Tape (3.8 cm x 10mts)", precio: 5300, pack: "Pack x6 $29.400", packCantidad: 6, packPrecio: 29400, cantidad: 0, imagen: "D3_Sport_Tape_blanco.jpg.jpeg" },
+    { id: 2, nombre: "D3 Sport Tape (5 cm x 10 mts)", precio: 6300, pack: "Pack x6 $35.000", packCantidad: 6, packPrecio: 35000, cantidad: 0, imagen: "D3_Sport_Tape_blanco.jpg.jpeg" },
+    { id: 3, nombre: "Tacsa PVC Tape (1.8 cm x 20 mts)", precio: 2700, pack: "-", cantidad: 0, imagen: "Tacsa_PVC_Tape_Termosellado_negro.jpg.jpeg" },
+    { id: 4, nombre: "Hipoalergic Negra (5 cm x 9 mts)", precio: 6800, pack: "Pack x6 $40.000", packCantidad: 6, packPrecio: 40000, cantidad: 0, imagen: "Hipoalergenic_Cinta_Adhesiva_Deportiva_negro.jpg.jpeg" },
+    { id: 5, nombre: "Light Rip Tape Blanco (7.5 cm x 7 mts)", precio: 11000, pack: "Pack x4 $40.000", packCantidad: 4, packPrecio: 40000, cantidad: 0, imagen: "D3_Light_Rip_Tape_blanco.jpg.jpeg" },
+    { id: 6, nombre: "Light Rip Tape Negro (7.5 cm x 7 mts)", precio: 11000, pack: "Pack x4 $40.000", packCantidad: 4, packPrecio: 40000, cantidad: 0, imagen: "D3_Light_Rip_Tape_negro.jpg.jpeg" },
+    { id: 7, nombre: "Cohesiva Blanca (7.5 cm x 7 mts)", precio: 5000, pack: "Pack x6 $27.000", packCantidad: 6, packPrecio: 27000, cantidad: 0, imagen: "D3_Tape_Cohesive_Polybag_blanco.jpg.jpeg" },
+    { id: 8, nombre: "Cohesiva Negra (7.5 cm x 7 mts)", precio: 5000, pack: "Pack x6 $27.000", packCantidad: 6, packPrecio: 27000, cantidad: 0, imagen: "D3_Tape_Cohesive_Polybag_negro.jpg.jpeg" },
+    { id: 9, nombre: "Hypofix (10 cm x 10 mts)", precio: 10500, pack: "Pack x4 $38.000", packCantidad: 4, packPrecio: 38000, cantidad: 0, imagen: "D3_HypoFix_blanco.jpg.jpeg" },
+    { id: 10, nombre: "RST Beige (3.8 cm x 10 mts)", precio: 8800, pack: "Pack x4 $32.000", packCantidad: 4, packPrecio: 32000, cantidad: 0, imagen: "D3_RST_Rigid_Tape_beige.jpg.jpeg" },
     { id: 11, nombre: "Protector Bucal Premium", precio: 15000, pack: "-", cantidad: 0, imagen: "D3_Protector_Bucal_Premium_Doble_Gel.jpg.jpeg" }
 ];
 
