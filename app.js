@@ -171,7 +171,7 @@ async function actualizarProgresoDivision() {
                     proximoTexto = " ¡Ya está en el máximo descuento posible!";
                 }
                 logroDescuento.innerHTML = `
-                    <div class="logro-titulo">🏆 ¡Logro desbloqueado!</div>
+                    <div class="logro-titulo"> Descuento alcanzado! </div>
                     <div class="logro-mensaje"><strong>${division}</strong> alcanzó el <strong>${descuentoActual}%</strong> de descuento.${proximoTexto}</div>
                 `;
                 logroDescuento.classList.add("activo");
