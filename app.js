@@ -218,7 +218,6 @@ if (botonEnviar) {
     botonEnviar.addEventListener("click", async () => {
         const nombre = document.getElementById("nombre").value.trim();
         const whatsapp = document.getElementById("whatsapp").value.trim();
-        const instagram = document.getElementById("instagram").value.trim();
         const division = document.getElementById("division").value;
 
         const pedido = productos
@@ -241,7 +240,7 @@ if (botonEnviar) {
 
         const total = productos.reduce((suma, p) => suma + (p.cantidad > 0 ? calcularSubtotal(p) : 0), 0);
 
-        const datos = { nombre, whatsapp, instagram, division, pedido, total };
+        const datos = { nombre, whatsapp, division, pedido, total };
 
         try {
             await fetch(URL_SCRIPT, {
